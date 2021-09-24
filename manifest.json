@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Tab Notes",
+    "description":"A quicker way to take notes",
+    "version":"0.1.0",
+    "browser_action":{
+        "default_popup":"popup.html"
+    },
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["script.js"],
+            "css":["styles.css"]
+        }
+    ],
+    "permissions":[
+        "storage"
+    ]
+}
