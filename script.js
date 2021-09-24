@@ -15,7 +15,7 @@ function setTitle(content) {
 // To fix later
 
 function setLineNumber(content) {
-    var lineNumber = content.substr(0, document.getElementById('text').prop('selectionStart')).split("n").length;
+    var lineNumber = content.split("\n").length;
     document.getElementById('lineNumber').innerHTML = lineNumber;
 }
 
@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         var content = document.getElementById("text").value;
         setContent(content)
         setTitle(content);
-        // setLineNumber(content);
+        setLineNumber(content);
     });
 
     document.getElementById('text').addEventListener('focus click', function() {
         var content = document.getElementById("text").value;
-        // setLineNumber(content);
+        setLineNumber(content);
     })
 })
